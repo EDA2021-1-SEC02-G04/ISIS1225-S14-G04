@@ -44,7 +44,7 @@ operación seleccionada.
 # ___________________________________________________
 
 
-servicefile = 'bus_routes_14000.csv'
+servicefile = 'bus_routes_50.csv'
 initialStation = None
 
 # ___________________________________________________
@@ -83,7 +83,8 @@ def optionThree(cont):
 
 
 def optionFour(cont, initialStation):
-    controller.minimumCostPaths(cont, initialStation)
+    respuesta=controller.minimumCostPaths(cont, initialStation)
+    print(respuesta[1])
 
 
 def optionFive(cont, destStation):
