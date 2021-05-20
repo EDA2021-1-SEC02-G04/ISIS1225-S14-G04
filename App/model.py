@@ -31,6 +31,7 @@ from DISClib.Algorithms.Graphs import scc
 from DISClib.Algorithms.Graphs import dijsktra as djk
 from DISClib.Utils import error as error
 assert config
+import haversine as hs
 
 """
 En este archivo definimos los TADs que vamos a usar y las operaciones
@@ -142,7 +143,7 @@ def addRouteConnections(analyzer):
     for key in lt.iterator(lststops):
         lstroutes = m.get(analyzer['stops'], key)['value']
         prevrout = None
-        for route in lt.iterator(lstroutes):
+        for route in lt.iterator(lstroutes):P
             route = key + '-' + route
             if prevrout is not None:
                 addConnection(analyzer, prevrout, route, 0)
